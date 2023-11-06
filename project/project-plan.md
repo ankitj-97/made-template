@@ -40,10 +40,12 @@ Short description of the DataSource.
 <!-- List of work packages ordered sequentially, each pointing to an issue with more details. -->
 1. Download the required data [#1][i1]
 2. Study the data [#2][i2]
-3. Use Pandas and other visualization tool for analysis [#3][i3]
+3. Perform Data Pre-Processing [#3][i3]
+4. Use Pandas and other visualization tool for analysis [#4][i4]
 
 
 
 [i1]: https://github.com/jvalue/made-template/issues/1
 [i2]: https://github.com/jvalue/made-template/issues/2
 [i3]: https://github.com/jvalue/made-template/issues/3
+[i4]: https://github.com/jvalue/made-template/issues/4
