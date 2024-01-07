@@ -2,8 +2,8 @@ import pandas as pd
 import sqlite3
 
 #Create a connection
-connection = sqlite3.connect('Dataset.sqlite')
-#connection = sqlite3.connect('Road_Accidents.sqlite')
+connection = sqlite3.connect('data/dataset.sqlite')
+
 
 # Fetch and load dataset 1 (2 different files for 2020 and 2021)
 url1 = "https://offenedaten-koeln.de/sites/default/files/Fahrrad_Zaehlstellen_Koeln_2020.csv"
