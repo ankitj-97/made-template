@@ -2,7 +2,7 @@
 
 ## Title
 <!-- Give your project a short title. -->
-Road Accident Severity in India & Consumer Behavior and Shopping Habits Dataset
+Road Accident & Bicycle Traffic Trends in Cologne
 
 ## Main Question
 
@@ -14,24 +14,25 @@ Road Accident Severity in India & Consumer Behavior and Shopping Habits Dataset
 ## Description
 
 <!-- Describe your data science project in max. 200 words. Consider writing about why and how you attempt it. -->
-Project 1 - Road Accident Severity in India:
-Explore road safety in India by looking at a big dataset about accidents. We want to figure out why accidents happen and how bad they can get. By using the data, we can predict how severe an accident might be. This is not just a project; it's a chance to make roads safer by understanding what causes accidents.
+Project 1 - Road Accident Data Cologne
+Explore road safety by looking at a big dataset about accidents. We want to figure out why accidents happen and how bad they can get. By using the data, we can predict what all factors can cause accidents. This is not just a project; it's a chance to make roads safer by understanding what causes accidents.
 
-Project 2 - Consumer Behavior and Shopping Habits Dataset:
-Ever wondered why people buy what they buy? This project is all about understanding how people make choices when shopping. We've got a bunch of data that gives insights into what people like to buy and when. It's like peeking into the minds of shoppers. Businesses can use this info to be smarter about what they sell and how they sell it.
+Project 2 - Bicycle Traffic Data Cologne
+This project describes the long term bicycle traffic trends such as, has there been an overall increase or decrease in bicycle traffic volume in Cologne over the years?
+This analysis can provide insights into popular cycling routes and intersections, helping planners identify areas where additional safety measures, such as dedicated bike lanes or traffic calming measures, are necessary.
 
 ## Datasources
 
 <!-- Describe each datasources you plan to use in a section. Use the prefic "DatasourceX" where X is the id of the datasource. -->
 
-### Datasource 1: Road Accident Severity in India
-* Data URL: https://www.kaggle.com/datasets/s3programmer/road-accident-severity-in-india
+### Datasource 1: Road Accident Data Cologne
+* Data URL: https://offenedaten-koeln.de/sites/default/files/Unfallstatistik%20K%C3%B6ln%202018.csv, https://offenedaten koeln.de/sites/default/files/Unfallstatistik%20K%C3%B6ln%202017.csv
 * Data Type: CSV
 
 Short description of the DataSource.
 
-### Datasource 2: Consumer Behavior and Shopping Habits Dataset:
-* Data URL: https://www.kaggle.com/datasets/zeesolver/consumer-behavior-and-shopping-habits-dataset
+### Datasource 2: Bicycle Traffic Data Cologne
+* Data URL: https://offenedaten-koeln.de/sites/default/files/Fahrrad_Zaehlstellen_Koeln_2020.csv , https://offenedaten-koeln.de/sites/default/files/Radverkehr%20f%C3%BCr%20Offene%20Daten%20K%C3%B6ln%202021.csv
 * Data Type: CSV
 
   
