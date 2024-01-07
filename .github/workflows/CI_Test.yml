@@ -1,0 +1,43 @@
+name: Continuous Integration Tests
+run-name: ${{ github.actor }} is testing out GitHub Actions
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+
+      # Install python
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      # Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
+          pip install pandas
+          pip install sqlalchemy
+
+      # Run Code Format check
+      - name: Set execute permissions
+        run:
+         chmod +x ./project/test.sh
+
+      # Run testcases
+      - name: Run test.sh
+        run: |
+          ./project/test.sh
