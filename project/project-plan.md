@@ -7,8 +7,8 @@ Road Accident & Bicycle Traffic Trends in Cologne
 ## Main Question
 
 <!-- Think about one main question you want to answer based on the data. -->
-1. Identification of major causes of the accidents happening in India.
-2. Consumer Behavior Analysis for Targeted Marketing
+1. Identification of major causes of the accidents happening.
+2. Has there been an overall increase in the number of bicycles in Cologne.
 
 
 ## Description
