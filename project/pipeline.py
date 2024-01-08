@@ -2,7 +2,7 @@ import pandas as pd
 import sqlite3
 
 #Create a connection
-connection = sqlite3.connect('Dataset.sqlite')
+connection = sqlite3.connect('data/Dataset.sqlite')
 
 # Fetch and load dataset 1
 url1 = 'https://offenedaten-koeln.de/sites/default/files/Unfallstatistik%20K%C3%B6ln%202018.csv'
