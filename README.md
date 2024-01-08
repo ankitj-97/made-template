@@ -30,4 +30,4 @@ Motivation: Promoting sustainable urban development in Cologne through the analy
 
 ## Important links:
 1. [Final Report (IPYNB)](./project/report.ipynb)
-2. [Python script containing data pipeline (pull_data.py)](./project/pipeline.py)
+2. [Python script containing data pipeline (pipeline.py)](./project/pipeline.py)
