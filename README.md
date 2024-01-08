@@ -1,17 +1,17 @@
 # Road Accident & Bicycle Traffic Trends in Cologne
 
-## Overview
-Project 1 - Road Accident Data Cologne
+## Dscription
+- **Project 1** - Road Accident Data Cologne
 Explore road safety by looking at a big dataset about accidents. We want to figure out why accidents happen and how bad they can get. By using the data, we can predict what all factors can cause accidents. This is not just a project; it's a chance to make roads safer by understanding what causes accidents.
 
-Project 2 - Bicycle Traffic Data Cologne
+- **Project 2** - Bicycle Traffic Data Cologne
 This project describes the long term bicycle traffic trends such as, has there been an overall increase or decrease in bicycle traffic volume in Cologne over the years?
 This analysis can provide insights into popular cycling routes and intersections, helping planners identify areas where additional safety measures, such as dedicated bike lanes or traffic calming measures, are necessary.
 
 ## Objectives
 
 - **Data Extraction:** Download and extract road accident and bicycle traffic data from online sources using Python.
-- **Data Transformation:** Convert raw CSV data into a proper format for efficient analysis.
+- **Data Transformation:** Convert raw CSV data into a proper format for efficient analysis and save it as sqlite file.
 - **Analysis:** Find the possible reasons for accidents and has the bicycle traffic increased or decresed in Cologne in last few years.
 
 ## Motivations
@@ -25,7 +25,7 @@ Motivation: Promoting sustainable urban development in Cologne through the analy
 ## Project Structure
 
 - **Data Collection:** Python code for downloading and extracting the reuqired data in CSV format (pipeline.py).
-- **Data Engineering:** Functions for transforming unclean data into a clean and usable pandas DataFrame(piepline.py).
+- **Data Engineering:** Functions for transforming unclean data into a clean and usable pandas DataFrame(piepline.py) and saving it in sqlite format.
 - **Result:** Ipynb report to present useful findings.
 
 ## Important links:
