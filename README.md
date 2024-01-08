@@ -1,6 +1,6 @@
 # Road Accident & Bicycle Traffic Trends in Cologne
 
-## Dscription
+## Description
 - **Project 1** - Road Accident Data Cologne
 Explore road safety by looking at a big dataset about accidents. We want to figure out why accidents happen and how bad they can get. By using the data, we can predict what all factors can cause accidents. This is not just a project; it's a chance to make roads safer by understanding what causes accidents.
 
