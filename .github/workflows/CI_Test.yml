@@ -35,6 +35,16 @@ jobs:
       # Run Code Format check
       - name: Set execute permissions
         run:
+         chmod +x ./project/pipeline.sh
+
+      # Run testcases
+      - name: Run test.sh
+        run: |
+          ./project/pipeline.sh
+
+      # Run Code Format check
+      - name: Set execute permissions
+        run:
          chmod +x ./project/test.sh
 
       # Run testcases
