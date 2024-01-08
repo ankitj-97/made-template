@@ -38,7 +38,7 @@ jobs:
          chmod +x ./project/pipeline.sh
 
       # Run testcases
-      - name: Run test.sh
+      - name: Run pipeline.sh
         run: |
           ./project/pipeline.sh
 
