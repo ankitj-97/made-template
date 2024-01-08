@@ -60,7 +60,7 @@ jobs:
       - name: Commit and Push CSV files
         run: |
           echo Adding Sqlite to data directory.
-          git add Dataset.sqlite
+          git add data/Dataset.sqlite
 
           git commit -m "Add generated Sqlite files" -a
           git push origin main
