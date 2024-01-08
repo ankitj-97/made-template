@@ -46,7 +46,7 @@ def test_dataframe_columns():
 def test_output_exists():
     #Test if output file exists or not
     directory_path = os.getcwd()  # get directory path
-    assert os.path.exists(os.path.join(directory_path, "Dataset.sqlite"))
+    assert os.path.exists(os.path.join(directory_path, "data" ,"Dataset.sqlite"))
 
 def test_pipeline():
     #Declaration of all test functions
