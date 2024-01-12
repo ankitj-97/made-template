@@ -19,7 +19,8 @@ with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
 
 # Need to add extra colums for successfull reading of csv
 data_path = os.path.join(extracted_folder_path, 'data.csv')
-
+first_line_df = pd.read_csv(data_path, nrows=1, header=None, sep=None)
+existing_columns = list(first_line_df.values.flatten().tolist())
 # Finding the maximum entries in a line in csv, so as to generate that many columns
 # Initialize a variable to store the maximum number of entries
 max_entries = 0
@@ -33,9 +34,6 @@ with open(data_path, 'r') as file:
         # Update the maximum number of entries if the current line has more entries
         max_entries = max(max_entries, len(entries))
 
-# Print the maximum number of entries
-print(f"The maximum number of entries in the CSV file is: {max_entries}")
-
 # Generate random column names
 new_columns = [''.join(random.choices(string.ascii_uppercase + string.digits, k=8)) for _ in range(max_entries)]
 
@@ -44,7 +42,8 @@ df = pd.read_csv(data_path,header=None, names=new_columns, skiprows=1, sep=';', 
 
 # Only use the columns "Geraet", "Hersteller", "Model", "Monat", "Temperatur in °C (DWD)", "Batterietemperatur in °C", "Geraet aktiv"
 final_column = ['Geraet', 'Hersteller', 'Model', 'Monat', 'Temperatur in °C (DWD)', 'Batterietemperatur in °C', 'Geraet aktiv']
-columns_mapping = dict(zip(df.columns[:7], final_column))
+columns_mapping = dict(zip(df.columns[:len(existing_columns)], existing_columns))
+df=df.iloc[:, :11]
 df.rename(columns=columns_mapping, inplace=True)
 df = df[final_column]
 
