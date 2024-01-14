@@ -11,7 +11,7 @@ road_accidents_2018 = pd.read_csv(url1, encoding="iso-8859-1",  delimiter=';')
 road_accidents_2017 = pd.read_csv(url2, encoding="iso-8859-1",  delimiter=';')
 
 
-# Fetch and load dataset 1 (2 different files for 2020 and 2021)
+# Fetch and load dataset 2 (3 different files for 2020, 2021 and 2022)
 url3 = 'https://offenedaten-koeln.de/sites/default/files/Fahrrad_Zaehlstellen_Koeln_2020.csv'
 url4 = 'https://offenedaten-koeln.de/sites/default/files/Radverkehr%20f%C3%BCr%20Offene%20Daten%20K%C3%B6ln%202021.csv'
 url5 = 'https://offenedaten-koeln.de/sites/default/files/Radverkehr%20f%C3%BCr%20Offene%20Daten%20K%C3%B6ln%202022.csv'
