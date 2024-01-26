@@ -1,0 +1,73 @@
+pipeline GtfsPipeline {
+
+
+    block GTFSSampleFeedExtractor oftype HttpExtractor {
+        url: "https://gtfs.rhoenenergie-bus.de/GTFS.zip";
+    }
+
+    block ZipArchiveInterpreter oftype ArchiveInterpreter {
+        archiveType: "zip";
+    }
+
+    
+    block StopsFilePicker oftype FilePicker {
+        path: "/stops.txt";
+    }
+
+    // 5. The rest of the pipeline follows the usual pattern.
+    block StopsTextFileInterpreter oftype TextFileInterpreter { }
+    block StopsCSVInterpreter oftype CSVInterpreter {
+        enclosing: '"';
+     }
+
+    valuetype validZoneid oftype integer {
+        constraints: [ZoneidConstraint];
+        }
+
+    valuetype validLatitude oftype decimal {
+        constraints: [Lat];
+        }
+
+    valuetype validLongitude oftype decimal {
+    constraints: [Long];
+    }
+
+    constraint ZoneidConstraint on integer: 
+    value == 2001;
+
+    constraint Lat oftype RangeConstraint {
+        lowerBound: -90;
+        upperBound: 90;
+        }
+
+    constraint Long oftype RangeConstraint {
+        lowerBound: -90;
+        upperBound: 90;
+        }
+
+    block StopsTableInterpreter oftype TableInterpreter {
+        header: true;
+        columns:[
+            "stop_id" oftype integer,
+            "stop_name" oftype text,
+            "stop_lat" oftype validLatitude,
+            "stop_lon" oftype validLongitude,
+            "zone_id" oftype validZoneid,
+        ];
+    }
+
+    block StopsLoader oftype SQLiteLoader {
+        table: "stops";
+        file: "./gtfs.sqlite";
+    }
+
+
+    GTFSSampleFeedExtractor 
+    -> ZipArchiveInterpreter
+     -> StopsFilePicker 
+      -> StopsTextFileInterpreter
+       -> StopsCSVInterpreter 
+        -> StopsTableInterpreter 
+         -> StopsLoader;
+
+}
